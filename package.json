@@ -36,7 +36,8 @@
     "to-regex-range": "^5.0.1",
     "touch": "^3.1.0",
     "undefsafe": "^2.0.5",
-    "yallist": "^4.0.0"
+    "yallist": "^4.0.0",
+    "yargs": "^17.7.2"
   },
   "keywords": [],
   "author": "",

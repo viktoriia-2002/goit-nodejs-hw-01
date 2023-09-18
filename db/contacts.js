@@ -20,15 +20,6 @@ async function getContactById(contactId) {
   return result || null;
 }
 
-// async function removeContact(contactId) {
-//   const contacts = await getAll();
-//   const index = contacts.find((item) => item.id === contactId);
-//   if (index === -1) {
-//     return null;
-//   }
-//   const [result] = contacts.splice(index, 1);
-//   await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
-// }
 async function removeContact(contactId) {
   const contacts = await getAll();
   const index = contacts.findIndex((item) => item.id === contactId);
@@ -54,7 +45,6 @@ async function addContact(name, email, phone) {
 }
 
 module.exports = {
-  getAll,
   getContactById,
   listContacts,
   addContact,
