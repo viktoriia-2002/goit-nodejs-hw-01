@@ -1,4 +1,4 @@
-const contacts = require("./db/contacts");
+const contacts = require("./contacts");
 const { Command } = require("commander");
 
 const program = new Command();
@@ -16,7 +16,7 @@ function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
       contacts.listContacts().then((contactsList) => {
-        console.log(contactsList);
+        console.table(contactsList);
       });
       break;
 
